@@ -3,107 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Covid-19 Stats</title>
+    <title>Game Leaderboard</title>
     <style>
-        /* Table styles */
         table {
             width: 80%;
-            margin: 50px auto;
+            margin: 20px auto;
             border-collapse: collapse;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* Header styling */
         thead {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #2c3e50;
+            color: #ffffff;
         }
-
         th {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
-            font-size: 1.1rem;
+            font-size: 16px;
+            border-bottom: 2px solid #34495e;
         }
-
-        /* Body styling */
-        tbody {
+        tbody tr {
             background-color: #f9f9f9;
+            transition: background-color 0.3s;
         }
-
+        tbody tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+        tbody tr:hover {
+            background-color: #dfe6e9;
+        }
         td {
             padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+            border: 1px solid #ddd;
+            font-size: 14px;
         }
-
-        tr:hover {
-            background-color: #f1f1f1;
+        td.rank {
+            font-weight: bold;
+            color: #e74c3c;
         }
-
-        /* Alternate row colors */
-        tr:nth-child(even) {
-            background-color: #f1f1f1;
-        }
-
-        /* Styling for the last row */
-        tr:last-child {
-            border-bottom: 2px solid #4CAF50;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            table {
-                width: 100%;
-            }
-            th, td {
-                font-size: 0.9rem;
-            }
+        td.score {
+            color: #2980b9;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin-top: 20px;">Covid-19 Statistics</h1>
     <table>
         <thead>
             <tr>
-                <th>Country</th>
-                <th>Total Cases</th>
-                <th>Total Deaths</th>
-                <th>Total Recovered</th>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Matches Played</th>
+                <th>Win Rate (%)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>USA</td>
-                <td>34,000,000</td>
-                <td>600,000</td>
-                <td>33,000,000</td>
+                <td class="rank">1</td>
+                <td>ShadowStriker</td>
+                <td class="score">12500</td>
+                <td>45</td>
+                <td>88</td>
             </tr>
             <tr>
-                <td>India</td>
-                <td>31,000,000</td>
-                <td>400,000</td>
-                <td>30,500,000</td>
+                <td class="rank">2</td>
+                <td>BlazeRunner</td>
+                <td class="score">11200</td>
+                <td>50</td>
+                <td>82</td>
             </tr>
             <tr>
-                <td>Brazil</td>
-                <td>20,000,000</td>
-                <td>550,000</td>
-                <td>19,200,000</td>
+                <td class="rank">3</td>
+                <td>ThunderBolt</td>
+                <td class="score">9800</td>
+                <td>38</td>
+                <td>76</td>
             </tr>
             <tr>
-                <td>Russia</td>
-                <td>10,000,000</td>
-                <td>250,000</td>
-                <td>9,500,000</td>
+                <td class="rank">4</td>
+                <td>StarCrusader</td>
+                <td class="score">8700</td>
+                <td>42</td>
+                <td>70</td>
             </tr>
             <tr>
-                <td>UK</td>
-                <td>8,500,000</td>
-                <td>150,000</td>
-                <td>8,300,000</td>
+                <td class="rank">5</td>
+                <td>MysticViper</td>
+                <td class="score">7500</td>
+                <td>35</td>
+                <td>65</td>
             </tr>
         </tbody>
     </table>
